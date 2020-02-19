@@ -13,9 +13,13 @@ namespace AppATLComplementa
         {
             _contexto = contexto;
             ReferenciaDePago = new ReferenciaDePagoRepositorio(_contexto);
+            Cliente = new ClienteRepositorio(_contexto);
+            ClientePersona = new ClientePersonaRepositorio(_contexto);
         }
 
         public IReferenciaDePagoRepositorio ReferenciaDePago { get; private set; }
+        public IClienteRepositorio Cliente { get; private set; }
+        public IClientePersonaRepositorio ClientePersona { get; private set; }
 
         public int Complete()
         {

@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 using AppATLComplementa.Negocio.Dominio;
 using AppATLComplementa.Nucleo.Repositorios;
 
-
 namespace AppATLComplementa.AccesoDatos.Repositorios
 {
-    public class ReferenciaDePagoRepositorio : Repositorio<ReferenciaDePago>, IReferenciaDePagoRepositorio
+    public class ClienteRepositorio : Repositorio<Cliente>, IClienteRepositorio
     {
-        public ReferenciaDePagoRepositorio(ATLComplementaContexto contexto) : base(contexto)
+        public ClienteRepositorio(ATLComplementaContexto contexto) : base(contexto)
         {
         }
 
@@ -21,9 +20,9 @@ namespace AppATLComplementa.AccesoDatos.Repositorios
             get { return Context as ATLComplementaContexto; }
         }
 
-        public IEnumerable<ReferenciaDePago> TraerPorCliente(int cliente)
+        public IEnumerable<Cliente> TraerPredio(int predio)
         {
-            return ATLComplementaContexto.ReferenciasDePago.Where(r => r.CliClave==cliente).ToList();
+            return ATLComplementaContexto.Clientes.Where(c => c.CntClave == predio).ToList();
         }
 
     }

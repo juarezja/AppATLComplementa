@@ -11,15 +11,15 @@ namespace AppATLComplementa.Negocio.Dominio
         public int RefPagClave { get; set; }
         public DateTime RefPagEmision { get; set; }
         public DateTime RefPagVencimiento { get; set; }
-        public float RefPagTotal { get; set; }
-        public float RefPagRedondeo { get; set; }
-        public float RefPagTotalRedondeado { get; set; }
-        public int RefPagDocumentos { get; set; }
-        public int EmpPerClave { get; set; }
+        public Double RefPagTotal { get; set; }
+        public Double RefPagRedondeo { get; set; }
+        public Double RefPagTotalRedondeado { get; set; }
+        public short RefPagDocumentos { get; set; }
+        public short EmpPerClave { get; set; }
         public string RefPagHostName { get; set; }
         public string RefPagReferencia { get; set; }
-        public int RefPagCancelada { get; set; }
-        public int CajTipDocClave { get; set; }
+        public short RefPagCancelada { get; set; }
+        public short CajTipDocClave { get; set; }
         public int RefPagDocumentoClave { get; set; }
         public int CliClave { get; set; }
     }
