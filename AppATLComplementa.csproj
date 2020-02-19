@@ -66,6 +66,10 @@
     <Compile Include="Migrations\202002130110125_CrearReferenciasDePago.designer.cs">
       <DependentUpon>202002130110125_CrearReferenciasDePago.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002182224145_CrearClientesyClientesPersonas.cs" />
+    <Compile Include="Migrations\202002182224145_CrearClientesyClientesPersonas.designer.cs">
+      <DependentUpon>202002182224145_CrearClientesyClientesPersonas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002130110125_CrearReferenciasDePago.resx">
       <DependentUpon>202002130110125_CrearReferenciasDePago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002182224145_CrearClientesyClientesPersonas.resx">
+      <DependentUpon>202002182224145_CrearClientesyClientesPersonas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,6 +92,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\AppATLComplementa.Negocio.Dominio.Cliente.datasource" />
+    <None Include="Properties\DataSources\AppATLComplementa.Negocio.Dominio.ClientePersona.datasource" />
     <None Include="Properties\DataSources\AppATLComplementa.Negocio.Dominio.ReferenciaDePago.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

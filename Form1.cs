@@ -8,27 +8,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using AppATLComplementa.AccesoDatos;
 using AppATLComplementa.Negocio.Dominio;
-
 
 namespace AppATLComplementa
 {
     public partial class Form1 : Form
     {
-        ATLComplementaContexto complementa;
+        Cliente cliente = new Cliente();
         public Form1()
         {
             InitializeComponent();
+            cntClaveTextBox.Focus();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void TraerDatos(int predio)
         {
             using (var unidadDeTrabajo = new UnidadDeTrabajo(new ATLComplementaContexto()))
             {
                 //var referencias = unidadDeTrabajo.ReferenciaDePago.TraerTodos();
-                referenciaDePagoBindingSource.DataSource = unidadDeTrabajo.ReferenciaDePago.TraerTodos();
+                clienteBindingSource.DataSource = unidadDeTrabajo.Cliente.TraerPredio(predio);
+                cliente = (Cliente)clienteBindingSource.Current;
+                referenciaDePagoBindingSource.DataSource = unidadDeTrabajo.ReferenciaDePago.TraerPorCliente(cliente.CntClave);
             }
+        }
+
+        private void cntClaveTextBox_Leave(object sender, EventArgs e)
+        {
+            TraerDatos(int.Parse(cntClaveTextBox.Text));
         }
     }
 }

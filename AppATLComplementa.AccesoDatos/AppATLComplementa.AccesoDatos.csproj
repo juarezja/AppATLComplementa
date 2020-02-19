@@ -52,8 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ATLComplementaContexto.cs" />
+    <Compile Include="ConfiguracionesEntidad\ClienteConfiguracion.cs" />
+    <Compile Include="ConfiguracionesEntidad\ClientePersonaConfiguracion.cs" />
     <Compile Include="ConfiguracionesEntidad\ReferenciaDePagoConfiguracion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\ClientePersonaRepositorio.cs" />
+    <Compile Include="Repositorios\ClienteRepositorio.cs" />
     <Compile Include="Repositorios\ReferenciaDePagoRepositorio.cs" />
     <Compile Include="Repositorios\Repositorio.cs" />
     <Compile Include="UnidadDeTrabajo.cs" />

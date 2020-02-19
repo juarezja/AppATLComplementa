@@ -3,14 +3,14 @@
     partial class Form1
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,30 +20,23 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.Label cntClaveLabel;
+            System.Windows.Forms.Label cliPerNombreLabel;
+            System.Windows.Forms.Label cliPerPaternoLabel;
+            this.cntClaveTextBox = new System.Windows.Forms.TextBox();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cliPerNombreTextBox = new System.Windows.Forms.TextBox();
+            this.cliPerPaternoTextBox = new System.Windows.Forms.TextBox();
             this.referenciaDePagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.referenciaDePagoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.referenciaDePagoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.referenciaDePagoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,140 +52,72 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            cntClaveLabel = new System.Windows.Forms.Label();
+            cliPerNombreLabel = new System.Windows.Forms.Label();
+            cliPerPaternoLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.referenciaDePagoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.referenciaDePagoBindingNavigator)).BeginInit();
-            this.referenciaDePagoBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.referenciaDePagoDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // cntClaveLabel
+            // 
+            cntClaveLabel.AutoSize = true;
+            cntClaveLabel.Location = new System.Drawing.Point(23, 11);
+            cntClaveLabel.Name = "cntClaveLabel";
+            cntClaveLabel.Size = new System.Drawing.Size(56, 13);
+            cntClaveLabel.TabIndex = 1;
+            cntClaveLabel.Text = "Cnt Clave:";
+            // 
+            // cliPerNombreLabel
+            // 
+            cliPerNombreLabel.AutoSize = true;
+            cliPerNombreLabel.Location = new System.Drawing.Point(-1, 37);
+            cliPerNombreLabel.Name = "cliPerNombreLabel";
+            cliPerNombreLabel.Size = new System.Drawing.Size(80, 13);
+            cliPerNombreLabel.TabIndex = 3;
+            cliPerNombreLabel.Text = "Cli Per Nombre:";
+            // 
+            // cliPerPaternoLabel
+            // 
+            cliPerPaternoLabel.AutoSize = true;
+            cliPerPaternoLabel.Location = new System.Drawing.Point(2, 65);
+            cliPerPaternoLabel.Name = "cliPerPaternoLabel";
+            cliPerPaternoLabel.Size = new System.Drawing.Size(80, 13);
+            cliPerPaternoLabel.TabIndex = 5;
+            cliPerPaternoLabel.Text = "Cli Per Paterno:";
+            // 
+            // cntClaveTextBox
+            // 
+            this.cntClaveTextBox.Location = new System.Drawing.Point(85, 8);
+            this.cntClaveTextBox.Name = "cntClaveTextBox";
+            this.cntClaveTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cntClaveTextBox.TabIndex = 2;
+            this.cntClaveTextBox.Leave += new System.EventHandler(this.cntClaveTextBox_Leave);
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(AppATLComplementa.Negocio.Dominio.Cliente);
+            // 
+            // cliPerNombreTextBox
+            // 
+            this.cliPerNombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "ClientePersona.CliPerNombre", true));
+            this.cliPerNombreTextBox.Location = new System.Drawing.Point(85, 34);
+            this.cliPerNombreTextBox.Name = "cliPerNombreTextBox";
+            this.cliPerNombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cliPerNombreTextBox.TabIndex = 4;
+            // 
+            // cliPerPaternoTextBox
+            // 
+            this.cliPerPaternoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "ClientePersona.CliPerPaterno", true));
+            this.cliPerPaternoTextBox.Location = new System.Drawing.Point(88, 62);
+            this.cliPerPaternoTextBox.Name = "cliPerPaternoTextBox";
+            this.cliPerPaternoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cliPerPaternoTextBox.TabIndex = 6;
             // 
             // referenciaDePagoBindingSource
             // 
             this.referenciaDePagoBindingSource.DataSource = typeof(AppATLComplementa.Negocio.Dominio.ReferenciaDePago);
-            // 
-            // referenciaDePagoBindingNavigator
-            // 
-            this.referenciaDePagoBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.referenciaDePagoBindingNavigator.BindingSource = this.referenciaDePagoBindingSource;
-            this.referenciaDePagoBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.referenciaDePagoBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.referenciaDePagoBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.referenciaDePagoBindingNavigatorSaveItem});
-            this.referenciaDePagoBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.referenciaDePagoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.referenciaDePagoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.referenciaDePagoBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.referenciaDePagoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.referenciaDePagoBindingNavigator.Name = "referenciaDePagoBindingNavigator";
-            this.referenciaDePagoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.referenciaDePagoBindingNavigator.Size = new System.Drawing.Size(800, 25);
-            this.referenciaDePagoBindingNavigator.TabIndex = 0;
-            this.referenciaDePagoBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            // 
-            // referenciaDePagoBindingNavigatorSaveItem
-            // 
-            this.referenciaDePagoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.referenciaDePagoBindingNavigatorSaveItem.Enabled = false;
-            this.referenciaDePagoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("referenciaDePagoBindingNavigatorSaveItem.Image")));
-            this.referenciaDePagoBindingNavigatorSaveItem.Name = "referenciaDePagoBindingNavigatorSaveItem";
-            this.referenciaDePagoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.referenciaDePagoBindingNavigatorSaveItem.Text = "Guardar datos";
             // 
             // referenciaDePagoDataGridView
             // 
@@ -214,10 +139,10 @@
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14});
             this.referenciaDePagoDataGridView.DataSource = this.referenciaDePagoBindingSource;
-            this.referenciaDePagoDataGridView.Location = new System.Drawing.Point(0, 68);
+            this.referenciaDePagoDataGridView.Location = new System.Drawing.Point(2, 88);
             this.referenciaDePagoDataGridView.Name = "referenciaDePagoDataGridView";
-            this.referenciaDePagoDataGridView.Size = new System.Drawing.Size(777, 220);
-            this.referenciaDePagoDataGridView.TabIndex = 1;
+            this.referenciaDePagoDataGridView.Size = new System.Drawing.Size(760, 280);
+            this.referenciaDePagoDataGridView.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -309,14 +234,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.referenciaDePagoDataGridView);
-            this.Controls.Add(this.referenciaDePagoBindingNavigator);
+            this.Controls.Add(cliPerPaternoLabel);
+            this.Controls.Add(this.cliPerPaternoTextBox);
+            this.Controls.Add(cliPerNombreLabel);
+            this.Controls.Add(this.cliPerNombreTextBox);
+            this.Controls.Add(cntClaveLabel);
+            this.Controls.Add(this.cntClaveTextBox);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.referenciaDePagoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.referenciaDePagoBindingNavigator)).EndInit();
-            this.referenciaDePagoBindingNavigator.ResumeLayout(false);
-            this.referenciaDePagoBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.referenciaDePagoDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -325,20 +252,11 @@
 
         #endregion
 
+        private System.Windows.Forms.BindingSource clienteBindingSource;
+        private System.Windows.Forms.TextBox cntClaveTextBox;
+        private System.Windows.Forms.TextBox cliPerNombreTextBox;
+        private System.Windows.Forms.TextBox cliPerPaternoTextBox;
         private System.Windows.Forms.BindingSource referenciaDePagoBindingSource;
-        private System.Windows.Forms.BindingNavigator referenciaDePagoBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton referenciaDePagoBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView referenciaDePagoDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -356,4 +274,3 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
     }
 }
-
